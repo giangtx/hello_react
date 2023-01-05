@@ -1,0 +1,18 @@
+.header {
+    background-color: beige;
+    display: flex;
+}
+.header-item {
+    padding: 10px 20px;
+}
+.header-active {
+    background-color: red;
+}
+.login-page {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.input-form {
+    padding: 10px 0;
+}
