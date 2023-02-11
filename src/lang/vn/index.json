@@ -1,0 +1,18 @@
+{
+  "app": {
+    "app_name": "slytherin"
+  },
+  "navbar": {
+    "user": "Người dùng",
+    "group": "Nhóm"
+  },
+  "user": {
+    "title": "Danh sach nguoi dung",
+    "search": "Tìm kiếm",
+    "table": {
+      "name": "Tên",
+      "age": "Tuổi"
+    },
+    "message": "không tìm thấy"
+  }
+}

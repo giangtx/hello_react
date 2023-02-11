@@ -1,0 +1,9 @@
+{
+  "app": {
+    "app_name": "slytherin en"
+  },
+  "navbar": {
+    "user": "Users",
+    "group": "Groups"
+  }
+}

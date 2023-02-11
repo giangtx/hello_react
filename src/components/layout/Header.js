@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ROUTER } from "../../utils/constants";
 import { useHistory, useParams } from "react-router-dom";
 import _ from 'lodash';
+import { changeLanguage } from "../../lang";
 
 const Header = () => {
 
@@ -21,7 +22,16 @@ const Header = () => {
       return (<div className="header-tiny" />)
     } else {
       return (
-        (<div className="header-tiny header-light" />)
+        <div className="header-tiny header-light">
+          <div className="header-lang">
+            <div className="lang-item" onClick={() => {changeLanguage('vn')}}>
+              VN
+            </div>
+            <div className="lang-item" onClick={() => {changeLanguage('en')}}>
+              EN
+            </div>
+          </div>
+        </div>
       )
     }
   }
