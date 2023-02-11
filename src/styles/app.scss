@@ -1,0 +1,45 @@
+@import 'layout';
+@import 'common';
+@import 'login';
+@import 'user';
+
+body {
+  position: relative;
+
+  min-height: 100vh;
+  margin: 0;
+}
+body,
+html {
+  overflow-x: hidden;
+
+  padding-right: 0 !important;
+
+  font-family: 'Roboto', Lato, "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic", "Hiragino Sans", Meiryo, system-ui, sans-serif, MeiryoUI, 'MS-Gothic';
+}
+
+body {
+  background: #F7F9FB;
+}
+
+.page-body-wrapper{
+  padding-top: 50px;
+  min-height: calc(100vh);
+}
+
+.loading-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.page-body-with-nav {
+  margin-left: 170px;
+  padding-top: 10px;
+}
+
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}

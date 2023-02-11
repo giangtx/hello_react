@@ -2,21 +2,31 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ROUTER } from "../../utils/constants";
 import { useHistory, useParams } from "react-router-dom";
+import _ from 'lodash';
 
 const Header = () => {
 
   const history = useHistory();
 
+  const isRouter = (routerNames = []) => {
+    return _.includes(routerNames, history.location.pathname);
+  }
+
   const getActive = (routerNames = []) => {
-    return routerNames.includes(history.location.pathname) ? 'header-active' : '';
+    return _.includes(routerNames, history.location.pathname) ? 'header-active' : '';
   };
 
-  return(
-    <div className="header">
-      <Link to={ROUTER.HOME} className={`header-item ${getActive([ROUTER.HOME, ROUTER.TEST])}`}>home</Link>
-      <Link to={ROUTER.LOGIN} className={`header-item ${getActive([ROUTER.LOGIN])}`}>login</Link>
-    </div>
-  )
+  const getContent = () => {
+    if (isRouter([ROUTER.LOGIN])) {
+      return (<div className="header-tiny" />)
+    } else {
+      return (
+        (<div className="header-tiny header-light" />)
+      )
+    }
+  }
+
+  return getContent()
 }
 
 export default Header;

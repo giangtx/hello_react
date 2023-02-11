@@ -1,0 +1,84 @@
+.header-tiny {
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  position: fixed;
+  display: flex;
+  height: 10px;
+  font-size: 14px;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+}
+.header-light {
+  background-color: #6a6a6a;
+}
+
+.header {
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  position: fixed;
+  display: flex;
+  height: 50px;
+  font-size: 14px;
+  align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  z-index: 20;
+  .login-box {
+    display: flex;
+    width: calc(100% - 100px);
+    justify-content: flex-end;
+    .btn-login {
+      cursor: pointer;
+    }
+  }
+}
+.header-item {
+  padding: 10px 20px;
+}
+.header-active {
+  background-color: red;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background: #202020;
+  height: 100vh;
+  position: fixed;
+  width: 170px;
+  .nav-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .logo {
+      font-size: 25px;
+      font-family: BeyondTheMountains;
+      color: #FFFFFF;
+    }
+  }
+  .navbar-container{
+    .nav-item {
+      padding-left: 20px;
+      cursor: pointer;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #262626;
+      color: #dbdbdb;
+    }
+    .active {
+      border-right: 5px solid #6a6a6a;
+      background: #2c2c2c;
+    } 
+  }
+  .nav-logout {
+    padding-left: 20px;
+    display: flex;
+    height: 50px;
+    margin-top: auto;
+    align-items: center;
+    border-top: 1px solid #262626;
+    color: #dbdbdb;
+  }
+}

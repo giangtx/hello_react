@@ -1,0 +1,68 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  .page-container {
+    width: 800px;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    border-radius: 10px;
+    .page-content {
+      .logo-title {
+        text-align: center;
+        font-family: BeyondTheMountains;
+        font-size: 50px;
+      }
+      .sub-title {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .input-container {
+        padding: 0;
+        width: 380px;
+        height: 100px;
+        .label-input {
+          margin-bottom: 0 !important;
+        }
+        .input-form {
+          border-radius: 5px;
+          font-size: 30px;
+          padding: 0 20px;
+          height: 60px;
+          width: 100%;
+        } 
+        input:focus {
+          border-radius: 10px;
+          border: 3px solid #3253b1 !important;
+        }
+        .active-input {
+          border-radius: 10px;
+          border: 3px solid #3253b1 !important;
+        }
+      }
+      .btn-login {
+        margin-top: 20px;
+        background: #111111;
+        color: #FFF;
+        font-size: 15px;
+        border: none;
+        width: 422px;
+        height: 60px;
+        cursor: pointer;
+      }
+      .btn-active {
+        font-weight: 700;
+        border-radius: 10px;
+        background: #3253b1!important;
+      }
+      .forgot-pass {
+        padding-top: 5px;
+        color: #007bff;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
