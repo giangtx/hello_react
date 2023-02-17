@@ -5,5 +5,8 @@
   "navbar": {
     "user": "Users",
     "group": "Groups"
+  },
+  "group": {
+    "title": "Group"
   }
 }
