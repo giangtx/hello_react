@@ -11,6 +11,7 @@ import Home from "./pages/home";
 import { ROUTER } from "./utils/constants";
 import Users from "./pages/users";
 import Groups from "./pages/groups";
+import Anon from "./pages/Anon";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path={ROUTER.TEST} component={Home} />
           <Route path={ROUTER.USERS} component={Users}/>
           <Route path={ROUTER.GROUPS} component={Groups}/>
+          <Route path={ROUTER.ANONS} component={Anon}/>
         </Layout>
       </Switch>
     </Router>

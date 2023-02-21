@@ -4,7 +4,8 @@
   },
   "navbar": {
     "user": "Người dùng",
-    "group": "Nhóm"
+    "group": "Nhóm",
+    "anons" : "Không biết gì"
   },
   "user": {
     "title": "Danh sach nguoi dung",
@@ -18,5 +19,8 @@
   },
   "group": {
     "title": "Danh sach nhom"
+  },
+  "anons": {
+    "title": "Không biết gì"
   }
 }

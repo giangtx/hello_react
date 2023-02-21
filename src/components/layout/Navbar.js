@@ -28,6 +28,8 @@ const Navbar = () => {
         </Link>
         <Link  to={ROUTER.TEST} className={`nav-item ${getActive([ROUTER.TEST])}`}>
           Test
+        </Link><Link  to={ROUTER.ANONS} className={`nav-item ${getActive([ROUTER.ANONS])}`}>
+          {t('navbar.anons')}
         </Link>
       </div>
       <div className="nav-item nav-logout">

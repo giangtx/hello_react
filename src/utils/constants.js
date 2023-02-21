@@ -4,4 +4,5 @@ export const ROUTER = {
   TEST: '/test/:id',
   USERS: '/users',
   GROUPS: '/groups',
+  ANONS: '/anons',
 }

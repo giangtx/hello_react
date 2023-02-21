@@ -4,9 +4,13 @@
   },
   "navbar": {
     "user": "Users",
-    "group": "Groups"
+    "group": "Groups",
+    "anons": "Anons"
   },
   "group": {
     "title": "Group"
+  },
+  "anons": {
+    "title": "Anon"
   }
 }

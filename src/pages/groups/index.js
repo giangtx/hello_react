@@ -23,7 +23,7 @@ const Groups = () => {
       console.log(res.data.data);
     }
     else{
-      console.log(res.data.message);
+      //console.log(res.data.message);
     }
     setLoading(false);
   }
