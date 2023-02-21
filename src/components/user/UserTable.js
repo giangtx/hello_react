@@ -1,9 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
-// nhận giá trị users từ component cha
-const UserTable = ({ users }) => {
+// nhận giá trị users từ component cha props
+const UserTable = ({ users, pageCount, forcePage, setPage }) => {
+
+  const history = useHistory();
+
+  const handlePageClick = (event) => {
+    //event.selected + 1 trang mà người dùng chọn
+    // setPage là hàm mà của component cha(Users) truyền cho 
+    setPage(event.selected + 1);
+    // redirect trang sang trang người dùng chọn
+    history.push(`/users?page=${ event.selected + 1}`)
+  }
+
   return (
     <div className='table-responsive table-common'>
         <div className='table-container'>
@@ -62,9 +73,10 @@ const UserTable = ({ users }) => {
               pageRangeDisplayed={3}
               previousClassName={'item previous'}
               nextClassName={'item next '}
-              pageCount={100}
+              pageCount={pageCount}
               previousLabel='<'
-              renderOnZeroPageCount={null}
+              onPageChange={handlePageClick}
+              forcePage={forcePage - 1}
             />
           </div>
         </div>
