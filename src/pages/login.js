@@ -1,19 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
+import authService from '../service/auth';
+import { setToken } from "../utils/cookies";
+import {ShowModalLoading,HideModalLoading} from "../store/modal/modal.action";
+import {useDispatch} from "react-redux";
+
+
 
 const Login = () => {
+
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = async() => {
     setMessage('');
     if (!username || !password) {
       setMessage('fail');
       return;
     }
     setMessage('success');
+
+    dispatch(ShowModalLoading());
+    const res = await authService.login(username,password);
+    if(res.status===200){
+      setToken(res.data.token);
+      history.push('/');
+    }
+    else if(res.status===404){
+      setMessage("User not found")
+    }
+    else{
+      setMessage(res.msg);
+    }
+    dispatch(HideModalLoading());
   }
 
   return (

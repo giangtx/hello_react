@@ -29,3 +29,25 @@ export const requestGet = async(url, params = {}, config = {}) => {
   }
 }
 
+export const requestPost = async(url, data = {}, config = {}) => {
+  // vì khi gọi api thì sẽ xảy ra các lỗi không kiểm soát được nên phải phải cho vào try catch
+  try {
+    // gì gọi api thì sẽ mất thời gian nên nó là bất đồng bộ vì vậy dùng async và await
+    // nếu thì chó thể dùng .then()
+    // hoặc dùng Promise()
+    const res = await axios.post(DEFAULT_URL + url, data, config)
+    // nếu k có gì xảy ra thì sẽ trả về kêt quả bên dưới
+    return {
+      data: res.data,
+      status: res.data.status,
+      msg: res.data.message,
+    };
+  } catch(error) {
+    // xảy ra lỗi
+    return {
+      status: 0,
+      msg: error,
+    }
+  }
+}
+
