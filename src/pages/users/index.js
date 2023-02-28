@@ -22,16 +22,13 @@ const Users = () => {
     // gọi service lấy thông tin user
     const res = await userService.getUser();
     if (res.status === 200) {
-      // nếu mà thành công thì gán giá trị cho biến users
       setUser(res.data.data);
     } else {
-      // nếu lỗi thì vào đây
       console.log(res.msg);
     }
     setLoading(false);
   }
 
-  // thay vì dùng ?: thì sẽ viết hàm để xử lý kết quả khi loading
   const getTableContent = () => {
     if (loading) {
       return <Loading />
